@@ -2,7 +2,19 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../sass/style.scss"
+        "../sass/style.scss",
+        "../sass/_variables.scss",
+        "../sass/_mixins.scss",
+        "../sass/components/_main-wrapper.scss",
+        "../sass/components/_wrapper-sm.scss",
+        "../sass/components/_topbar-sm.scss",
+        "../sass/components/_menu-sm.scss",
+        "../sass/components/_header.scss",
+        "../sass/components/_topbar-xl.scss",
+        "../sass/components/_menu-xl.scss",
+        "../sass/components/_banner.scss",
+        "../sass/components/_dots.scss",
+        "../sass/components/_handset.scss"
     ],
     "names": [],
     "file": "style.css"
