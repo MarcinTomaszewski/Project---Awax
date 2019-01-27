@@ -6,79 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AWAX - </title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Modal 'Done' for section header -->
+    <div class="modal-done">
+        <p>Done!</p>
+        <p>We will soon get back to you.</p>
+    </div>
+    <!-- Modal for section header -->
+    <div class="modal-header">
+        <div class="modal">
+            <button class="btn close"><i class="far fa-times-circle"></i></button>
+            <form action="">
+                <label for="name"></label>
+                <input type="text" name="name" placeholder="Name">
+                <label for="phone"></label>
+                <input type="text" name="phone" placeholder="+00 0 1234 5678">
+                <input type="submit" value="Call me back!" class="btn btn-cigar js-done">
+            </form>
+        </div>
+    </div>
+    <!-- Modal for section about -->
+    <div class="modal-video">
+        <div class="modal">
+            <button class="btn close"><i class="far fa-times-circle"></i></button>
+            <video src="video/20190124_091402.mp4" controls playsinline></video>
+        </div>
+    </div>
+    <!-- Modal for section projects -->
+    <div class="modal-projects">
+        <div class="modal">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </div>
+    <!-- Scroll button -->
+    <button class="scroll-up btn btn-circle" title="Return to the beginning of the page">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Main container page -->
     <div class="main-wrapper">
         <!-- Navigation on mobile devices -->
-        <div class="wrapper-sm">
-            <div class="topbar-sm">
-                <a href="#"><img src="" alt="Company logo"></a>
-                <div class="ham"><i class="fas fa-bars"></div>
-            </div>
-            <nav class="menu-sm">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">AbouT US</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our projects</a></li>
-                    <li><a href="#">Our team</a></li>
-                    <li><a href="#">Happy clients</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Some facts</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-
+        <nav class="menu-sm">
+            <ul>
+                <li><a href="#" data-scroll="header">Home</a></li>
+                <li><a href="#" data-scroll="about">AbouT US</a></li>
+                <li><a href="#" data-scroll="services">Services</a></li>
+                <li><a href="#" data-scroll="projects">Our projects</a></li>
+                <li><a href="#" data-scroll="team">Our team</a></li>
+                <li><a href="#" data-scroll="clients">Happy clients</a></li>
+                <li><a href="#" data-scroll="price">Price</a></li>
+                <li><a href="#" data-scroll="facts">Some facts</a></li>
+                <li><a href="#" data-scroll="contact">Contact us</a></li>
+            </ul>
+        </nav>
+        <!-- </div> -->
         <!-- Section header -->
-        <header>
-            <nav class="topbar-xl">
-                <a href="#"><img src="" alt="Company logo"></a>
-                <ul class="menu-xl">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">AbouT US</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our projects</a></li>
-                    <li><a href="#">Our team</a></li>
-                    <li><a href="#">Happy clients</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Some facts</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
+        <header class="header">
+            <nav class="topbar">
+                <div class="container">
+                    <a href="#"><img src="img/logo.png" alt="Company logo"></a>
+                    <ul class="menu-xl">
+                        <li><a href="#" data-scroll="header">Home</a></li>
+                        <li><a href="#" data-scroll="about">AbouT US</a></li>
+                        <li><a href="#" data-scroll="services">Services</a></li>
+                        <li><a href="#" data-scroll="projects">Our projects</a></li>
+                        <li><a href="#" data-scroll="team">Our team</a></li>
+                        <li><a href="#" data-scroll="clients">Happy clients</a></li>
+                        <li><a href="#" data-scroll="price">Price</a></li>
+                        <li><a href="#" data-scroll="facts">Some facts</a></li>
+                        <li><a href="#" data-scroll="contact">Contact us</a></li>
+                    </ul>
+                    <div class="ham"><i class="fas fa-bars"></i></div>
+                </div>
             </nav>
             <div class="banner">
                 <h1>Design is about</h1>
                 <h1>Communication</h1>
                 <p>Call us: +00 0 1234 5678 </p>
-                <button>Get in touch!</button>
+                <button class="btn btn-cigar js-modal-header">Get in touch!</button>
             </div>
             <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="dot" data-dot="0"></span>
+                <span class="dot" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
             </div>
-            <div class="handset"></div>
+            <button class="handset btn btn-circle js-modal-header">
+                <i class="fas fa-phone-volume" title="Phone to you."></i>
+            </button>
+            <div class="handset-desc">
+                <h3>Telephones to our branches.</h3>
+                <div class="arrow"></div>
+                <div class="box">
+                    <div class="box-ele">
+                        <p>Denver</p>
+                        <p>tel.5455-454-545</p>
+                        <p>maind@rtr.com</p>
+                    </div>
+                    <div class="box-ele">
+                        <p>Miami</p>
+                        <p>tel.5455-454-545</p>
+                        <p>maind@rtr.com</p>
+                    </div>
+                    <div class="box-ele">
+                        <p>New York</p>
+                        <p>tel.5455-454-545</p>
+                        <p>maind@rtr.com</p>
+                    </div>
+                    <div class="box-ele">
+                        <p>Los angeles</p>
+                        <p>tel.5455-454-545</p>
+                        <p>maind@rtr.com</p>
+                    </div>
+                </div>
+            </div>
         </header>
-        <!-- Modal for section header -->
-        <div class="modal">
-            <div class="modal-header">
-                <button class="close"></button>
-                <div class="title">
-                    <h3></h3>
-                    <p></p>
-                </div>
-                <div class="body">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
-            </div>
-        </div>
         <!-- Section about -->
         <section class="about">
             <div class="container">
@@ -88,11 +138,21 @@
                 </header>
                 <div class="about-content">
                     <div class="about-box">
-                        <p></p>
-                        <button>Learn more</button>
+                        <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum.
+                            Nulla at facilisis est,
+                            vel condimentum ligula. Mauris volutpat vitae risus sed pellentesque. Praesent fermentum
+                            neque ac tellus gravida,
+                            at varius sem accumsan. Nam porta erat id sapien consectetur. Fusce sed purus eros.</p>
+                        <button class="btn btn-cigar">Learn more</button>
                     </div>
                     <div class="about-box">
-                        <video src=""></video>
+                        <img src="img/video-640_346.jpg" alt="Run video">
+                        <div class="shadow"></div>
+                        <div class="about-box-title">
+                            <span>Watch</span>
+                            <span><i class="fas fa-caret-right close" title="Click and watch."></i></span>
+                            <span>Video!</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,10 +165,29 @@
                     <p>Services that we provide</p>
                 </header>
                 <div class="services-content">
-                    <div class="services-box"></div>
-                    <div class="services-box"></div>
-                    <div class="services-box"></div>
-                    <div class="services-box"></div>
+                    <div class="services-box">
+                        <div><img src="img/service-quality.png" alt="High quality design"></div>
+                        <h3>High quality</h3>
+                        <h3>Design</h3>
+                        <p>Praesent metus urna, feugiat a placerat elementum</p>
+                    </div>
+                    <div class="services-box">
+                        <div><img src="img/services-star.png" alt="Modern design"></div>
+                        <h3>Modern design</h3>
+                        <p>Praesent metus urna, feugiat a placerat elementum</p>
+                    </div>
+                    <div class="services-box">
+                        <div><img src="img/services-clock.png" alt="Regular updates"></div>
+                        <h3>Regular</h3>
+                        <h3>Updates</h3>
+                        <p>Praesent metus urna, feugiat a placerat elementum</p>
+                    </div>
+                    <div class="services-box">
+                        <div><img src="img/services-support.png" alt="Fast and free support"></div>
+                        <h3>Fast and free</h3>
+                        <h3>Support</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing. </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -119,6 +198,673 @@
                     <h2>Our projects</h2>
                     <p>What we create</p>
                 </header>
+                <ul class="project-menu">
+                    <li><span class="project-btn active" data-link="link1">All</span></li>
+                    <li><span class="project-btn" data-link="link2">Photos</span></li>
+                    <li><span class="project-btn" data-link="link3">Branding</span></li>
+                    <li><span class="project-btn" data-link="link4">Adverts</span></li>
+                    <li><span class="project-btn" data-link="link5">Development</span></li>
+                    <li><span class="project-btn" data-link="link6">Misc</span></li>
+                </ul>
+                <div class="project-box all-projects active" data-link="link1">
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project6-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box photos" data-link="link2">
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project6-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our project">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box branding" data-link="link3">
+                    <div class="foto">
+                        <img src="img/project6-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box adverts" data-link="link4">
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project6-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box development" data-link="link5">
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project6-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box misc" data-link="link6">
+                    <div class="foto">
+                        <img src="img/project9-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project8-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project1-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project12-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project3-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project10-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project2-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project5-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project7-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project4-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="img/project11-255_165.png" alt="Our projects">
+                        <div class="title">
+                            <div class="title-content">
+                                <h4>About</h4>
+                                <p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-cigar">More projects</button>
             </div>
         </section>
         <!-- Section team -->
@@ -226,9 +972,8 @@
                 <li></li>
                 <li></li>
             </ul>
-            <button></button>
         </section>
-        <!-- Sekcion footer -->
+        <!-- Section footer -->
         <footer>
             <div class="container">
                 <div class="footer-content">
@@ -239,7 +984,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
