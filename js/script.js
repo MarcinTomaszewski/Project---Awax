@@ -78,6 +78,11 @@ dots.forEach(function (element) {
     })
 })
 
+// Spróbować przerobić tak obsługę modali by po kliknięciu któregoś z przycisków wywołujących modal - pojawiał się odpowiedni modal.
+// Dodać przyciskom ta sama klasę by pobrać je za jednym razem.
+// Dodać przyciskom atrybuty data-
+// Dodać modalom ta sama klasę by pobrać je za jednym razem.
+// Dodać modalom atrybuty data- odpowiadające wywołującym je przyciskom.
 // MODAL EFFECTS
 //Show modal-header
 showModalHeaderBtns.forEach(function (element) {
@@ -110,7 +115,7 @@ closeModalVideoBtn.addEventListener('click', function () {
     video.pause();
 })
 
-
+// Nie dałem rady zrobić efektów scrolowania w czystym JS.
 // SCROLL EFFECTS
 // Scroll page to start
 $(document).ready(function () {
@@ -143,16 +148,8 @@ $('.menu-xl li a, .menu-sm li a').on('click', function () {
 })
 
 // Section projects support
-function clearSectionFromActiveClass(section) {
-    section.forEach(function (element) {
-        if (element.classList.contains('active')) {
-            element.classList.remove('active');
-        }
-    })
-}
-
-function clearBtnFromActiveClass(button) {
-    button.forEach(function (element) {
+function clearActiveClass(domElements) {
+    domElements.forEach(function (element) {
         if (element.classList.contains('active')) {
             element.classList.remove('active');
         }
@@ -174,8 +171,8 @@ function addClassActiveSection(section, attr) {
 projectsBtn.forEach(function (element) {
     element.addEventListener('click', function () {
         const attrValue = element.getAttribute('data-link');
-        clearBtnFromActiveClass(projectsBtn);
-        clearSectionFromActiveClass(sectionBox);
+        clearActiveClass(sectionBox);
+        clearActiveClass(projectsBtn);
 
         if (attrValue) {
             addClassActiveBtn(element);
