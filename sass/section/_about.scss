@@ -1,0 +1,103 @@
+.about {
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 92px;
+
+    .about-content {
+        display: flex;
+        justify-content: space-between;
+
+        .about-box:nth-child(1) {
+            padding-left: 20px;
+
+            p {
+                max-width: 534px;
+                margin-bottom: 33px;
+                color: #242424;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+
+        .about-box:nth-child(2) {
+            position: relative;
+            overflow: hidden;
+            min-width: 425px;
+            height: 250px;
+            margin-right: 5px;
+            box-shadow: 0 13px 24px rgba(0, 0, 1, 0.42);
+            transition: .4s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(.9);
+                min-width: 100%;
+                min-height: 100%;
+                cursor: pointer;
+                transition: .8s;
+
+                &:hover {}
+            }
+
+            .shadow {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, .5);
+            }
+
+            .about-box-title {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                // color: #b88b58;
+                color: #fff;
+
+                span {
+                    display: inline-block;
+                }
+
+                span:nth-of-type(2) {
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    vertical-align: -12px;
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:hover {
+                        background-color: rgba(0, 145, 234, 0.8);
+                        transform: scale(1.1);
+                    }
+
+                    &:hover i {
+                        font-size: 44px;
+                    }
+
+                    i {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-30%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}

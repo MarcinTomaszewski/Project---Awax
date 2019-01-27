@@ -1,9 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'section/main-wrapper';
-@import 'section/wrapper-sm';
 @import 'section/header';
-@import 'section/modal';
 @import 'section/about';
 @import 'section/services';
 @import 'section/projects';
@@ -18,16 +16,32 @@
 @import 'section/map';
 @import 'section/footer';
 @import 'components/button';
-@import 'components/topbar-sm';
 @import 'components/menu-sm';
-@import 'components/topbar-xl';
+@import 'components/topbar';
 @import 'components/menu-xl';
 @import 'components/banner';
 @import 'components/dots';
 @import 'components/handset';
+@import 'components/handset-desc';
+@import 'components/project-menu';
+@import 'components/modal-done';
 @import 'components/modal-header';
+@import 'components/modal-video';
+@import 'components/modal-projects';
 @import 'components/container';
 @import 'components/section-title';
+@import 'components/project-box';
 @import 'components/team-box';
 @import 'components/price-box';
 @import 'components/facts-box';
+@import 'components/scroll-up';
+
+// font-family: 'Montserrat', sans-serif;
+// Small reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
