@@ -1,0 +1,58 @@
+.dots {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    min-width: 65px;
+
+    .dot {
+        min-width: 14px;
+        min-height: 14px;
+        border: 2px solid#b88b58;
+        border-radius: 50%;
+        cursor: pointer;
+        animation: changeDot 12s linear infinite both;
+
+        &:hover {
+            background-color: #b88b58;
+        }
+    }
+
+    .dot.active {
+        background-color: #b88b58;
+    }
+
+    .dot:nth-of-type(2) {
+        animation-delay: 4s;
+    }
+
+    .dot:nth-of-type(3) {
+        animation-delay: 8s;
+    }
+
+
+}
+
+@keyframes changeDot {
+    0% {
+        background-color: transparent;
+    }
+
+    1% {
+        background-color: #b88b58;
+    }
+
+    32% {
+        background-color: #b88b58;
+    }
+
+    33% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}

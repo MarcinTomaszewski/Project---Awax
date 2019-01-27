@@ -1,0 +1,70 @@
+.project-box {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 38px 0;
+    font-family: 'Montserrat', sans-serif;
+
+    .foto {
+        position: relative;
+        flex-basis: 23%;
+        margin-bottom: 20px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            display: block;
+            transition: .3s;
+        }
+
+        .title {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, .5);
+            opacity: 0;
+            transition: .3s;
+
+            .title-content {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 75%;
+                text-align: justify;
+                color: #fff;
+
+                h4 {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &:hover .title {
+            opacity: 1;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.project-box.active {
+    display: flex;
+}

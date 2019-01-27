@@ -1,0 +1,45 @@
+.btn {
+    border-style: none;
+    border: 2px solid #b88b58;
+    cursor: pointer;
+}
+
+
+.btn-cigar {
+    padding: 10px 32px;
+    border-radius: 32px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background-color: #b88b58;
+}
+
+.btn-circle {
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #b88b58;
+
+    &:hover {
+        border: 2px solid #b88b58;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+.btn-cigar,
+.btn-circle {
+    &:hover {
+        color: #b88b58;
+        background-color: #fff;
+    }
+}

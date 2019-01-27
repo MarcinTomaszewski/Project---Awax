@@ -1,0 +1,30 @@
+.menu-xl {
+    display: flex;
+
+    li {
+        display: flex;
+
+        a {
+            padding: 0 7px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            height: 86px;
+            line-height: 86px;
+            transition: .1s;
+
+            &:hover {
+                background-color: #333;
+                border-bottom: 3px solid #b88b58;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-xl {
+        display: none;
+    }
+}

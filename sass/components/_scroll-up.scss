@@ -1,0 +1,15 @@
+.scroll-up {
+    display: none;
+    position: fixed;
+    left: 7vh;
+    bottom: 7vh;
+    z-index: 1;
+
+    i {
+        font-size: 52px;
+    }
+}
+
+.scroll-up.active {
+    display: block;
+}

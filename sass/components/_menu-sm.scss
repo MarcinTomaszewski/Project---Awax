@@ -1,0 +1,37 @@
+.menu-sm {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: -197px;
+    width: 100%;
+    z-index: 1;
+    transition: .3s;
+
+    >ul {
+
+        a {
+            display: block;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            background-color: #222;
+            transition: .1s;
+
+            &:hover {
+                background-color: #b88b58;
+            }
+        }
+    }
+}
+
+.menu-sm.active {
+    top: 55px;
+}
+
+@media (max-width: 1024px) {
+    .menu-sm {
+        display: block;
+    }
+}

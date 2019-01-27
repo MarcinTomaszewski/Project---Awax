@@ -1,0 +1,54 @@
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    transform: translateX(-50%);
+    max-width: 654px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 69px;
+    text-transform: uppercase;
+
+    h1,
+    h1 {
+        font-size: 62px;
+        animation: changeText 4s linear infinite both;
+    }
+
+
+    h1:nth-child(2) {
+        color: #b88b58;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@keyframes changeText {
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

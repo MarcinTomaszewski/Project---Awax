@@ -1,0 +1,14 @@
+.handset {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    transform: translateY(50%);
+
+    &:hover+.handset-desc {
+        display: block;
+    }
+
+    i {
+        font-size: 34px;
+    }
+}

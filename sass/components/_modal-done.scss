@@ -1,0 +1,42 @@
+.modal-done {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 1, 0.2);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #aeaeae;
+    z-index: 4;
+
+    p:first-child {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p:last-child {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+}
+
+.modal-done.active {
+    animation: showModal 2s linear;
+}
+
+@keyframes showModal {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}

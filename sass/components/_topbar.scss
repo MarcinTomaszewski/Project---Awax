@@ -1,0 +1,52 @@
+.topbar {
+    background-color: #000;
+
+    >.container {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        >a {
+            display: block;
+            margin-left: 30px;
+            margin-right: 133px;
+        }
+
+        .ham {
+            display: none;
+            margin-left: auto;
+            margin-right: 30px;
+            font-size: 28px;
+            color: #fff;
+            cursor: pointer;
+            transition: .1s;
+
+            &:hover,
+            &.active {
+                color: #b88b58;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .topbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+
+        >.container {
+            >a {
+                img {
+                    transform: scale(.7);
+                }
+            }
+
+            .ham {
+                display: block;
+            }
+        }
+    }
+}
