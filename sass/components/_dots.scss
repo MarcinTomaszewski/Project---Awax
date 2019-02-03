@@ -13,7 +13,7 @@
         border: 2px solid#b88b58;
         border-radius: 50%;
         cursor: pointer;
-        animation: changeDot 12s linear infinite both;
+        // animation: changeDot 12s linear infinite both;
 
         &:hover {
             background-color: #b88b58;
@@ -25,11 +25,11 @@
     }
 
     .dot:nth-of-type(2) {
-        animation-delay: 4s;
+        // animation-delay: 4s;
     }
 
     .dot:nth-of-type(3) {
-        animation-delay: 8s;
+        // animation-delay: 8s;
     }
 
 
