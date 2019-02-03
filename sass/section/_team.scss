@@ -1,0 +1,32 @@
+.team {
+    position: relative;
+    min-height: 700px;
+    background-image: url(../../img/team_bgi_1025x448.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .container {
+        position: relative;
+    }
+
+    .section-title {
+        h2 {
+            color: #fff;
+        }
+    }
+}
+
+.team-content {
+    display: none;
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.team-content.active {
+    display: flex;
+}
