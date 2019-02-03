@@ -22,12 +22,13 @@
     <div class="modal-header">
         <div class="modal">
             <button class="btn close"><i class="far fa-times-circle"></i></button>
-            <form action="">
+            <form action="#">
                 <label for="name"></label>
                 <input type="text" name="name" placeholder="Name">
                 <label for="phone"></label>
                 <input type="text" name="phone" placeholder="+00 0 1234 5678">
-                <input type="submit" value="Call me back!" class="btn btn-cigar js-done">
+                <input type="submit" class="btn btn-cigar js-done" value="Call me back!">
+                <!-- <button class="btn btn-cigar js-done">Call me back!</button> -->
             </form>
         </div>
     </div>
@@ -95,7 +96,7 @@
                 <button class="btn btn-cigar js-modal-header">Get in touch!</button>
             </div>
             <div class="dots">
-                <span class="dot" data-dot="0"></span>
+                <span class="dot active" data-dot="0"></span>
                 <span class="dot" data-dot="1"></span>
                 <span class="dot" data-dot="2"></span>
             </div>
@@ -137,20 +138,20 @@
                     <p>Who we are?</p>
                 </header>
                 <div class="about-content">
-                    <div class="about-box">
+                    <article class="about-box">
                         <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum.
                             Nulla at facilisis est,
                             vel condimentum ligula. Mauris volutpat vitae risus sed pellentesque. Praesent fermentum
                             neque ac tellus gravida,
                             at varius sem accumsan. Nam porta erat id sapien consectetur. Fusce sed purus eros.</p>
                         <button class="btn btn-cigar">Learn more</button>
-                    </div>
+                    </article>
                     <div class="about-box">
                         <img src="img/video-640_346.jpg" alt="Run video">
                         <div class="shadow"></div>
                         <div class="about-box-title">
                             <span>Watch</span>
-                            <span><i class="fas fa-caret-right close" title="Click and watch."></i></span>
+                            <span class="show"><i class="fas fa-caret-right" title="Click and watch."></i></span>
                             <span>Video!</span>
                         </div>
                     </div>
@@ -165,29 +166,29 @@
                     <p>Services that we provide</p>
                 </header>
                 <div class="services-content">
-                    <div class="services-box">
+                    <article class="services-box">
                         <div><img src="img/service-quality.png" alt="High quality design"></div>
                         <h3>High quality</h3>
                         <h3>Design</h3>
                         <p>Praesent metus urna, feugiat a placerat elementum</p>
-                    </div>
-                    <div class="services-box">
+                    </article>
+                    <article class="services-box">
                         <div><img src="img/services-star.png" alt="Modern design"></div>
                         <h3>Modern design</h3>
-                        <p>Praesent metus urna, feugiat a placerat elementum</p>
-                    </div>
-                    <div class="services-box">
+                        <p><span>Praesent metus urna, feugiat a placerat elementum</span></p>
+                    </article>
+                    <article class="services-box">
                         <div><img src="img/services-clock.png" alt="Regular updates"></div>
                         <h3>Regular</h3>
                         <h3>Updates</h3>
                         <p>Praesent metus urna, feugiat a placerat elementum</p>
-                    </div>
-                    <div class="services-box">
+                    </article>
+                    <article class="services-box">
                         <div><img src="img/services-support.png" alt="Fast and free support"></div>
                         <h3>Fast and free</h3>
                         <h3>Support</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing. </p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -206,7 +207,7 @@
                     <li><span class="project-btn" data-link="link5">Development</span></li>
                     <li><span class="project-btn" data-link="link6">Misc</span></li>
                 </ul>
-                <div class="project-box all-projects active" data-link="link1">
+                <div class="project-box active" data-link="link1">
                     <div class="foto">
                         <img src="img/project1-255_165.png" alt="Our project">
                         <div class="title">
@@ -316,7 +317,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-box photos" data-link="link2">
+                <div class="project-box" data-link="link2">
                     <div class="foto">
                         <img src="img/project12-255_165.png" alt="Our project">
                         <div class="title">
@@ -426,7 +427,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-box branding" data-link="link3">
+                <div class="project-box" data-link="link3">
                     <div class="foto">
                         <img src="img/project6-255_165.png" alt="Our projects">
                         <div class="title">
@@ -536,7 +537,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-box adverts" data-link="link4">
+                <div class="project-box" data-link="link4">
                     <div class="foto">
                         <img src="img/project12-255_165.png" alt="Our projects">
                         <div class="title">
@@ -644,7 +645,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-box development" data-link="link5">
+                <div class="project-box" data-link="link5">
                     <div class="foto">
                         <img src="img/project3-255_165.png" alt="Our projects">
                         <div class="title">
@@ -754,7 +755,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-box misc" data-link="link6">
+                <div class="project-box" data-link="link6">
                     <div class="foto">
                         <img src="img/project9-255_165.png" alt="Our projects">
                         <div class="title">
@@ -874,11 +875,161 @@
                     <h2>Our team</h2>
                     <p>Our co-workers</p>
                 </header>
-                <div class="team-content">
-                    <div class="team-box"></div>
-                    <div class="team-box"></div>
-                    <div class="team-box"></div>
+                <div class="team-content active" data-value="0">
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team1-183_183.png" alt="Jane Doe">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Jane Doe</h4>
+                        <p class="team-proffesion">Master mind</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team2-184_183.png" alt="Mike Shiller">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Mike Shiller</h4>
+                        <p class="team-proffesion">Creative head</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team3-184_183.png" alt="Anna Johns">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Anna Johns</h4>
+                        <p class="team-proffesion">Technical lead</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
                 </div>
+                <div class="team-content" data-value="1">
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team2-184_183.png" alt="Jane Doe">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Jane Doe</h4>
+                        <p class="team-proffesion">Master mind</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team3-184_183.png" alt="Mike Shiller">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Mike Shiller</h4>
+                        <p class="team-proffesion">Creative head</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team1-183_183.png" alt="Anna Johns">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Anna Johns</h4>
+                        <p class="team-proffesion">Technical lead</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="team-content" data-value="2">
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team3-184_183.png" alt="Jane Doe">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Jane Doe</h4>
+                        <p class="team-proffesion">Master mind</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team2-184_183.png" alt="Mike Shiller">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Mike Shiller</h4>
+                        <p class="team-proffesion">Creative head</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                    <article class="team-box">
+                        <div class="team-foto"><img src="img/team1-183_183.png" alt="Anna Johns">
+                            <h4 class="foto-title">Click me</h4>
+                        </div>
+                        <h4 class="team-name">Anna Johns</h4>
+                        <p class="team-proffesion">Technical lead</p>
+                        <div class="team-icon-wrap">
+                            <a href="#" class="team-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="team-icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="team-icon"><i class="fas fa-ellipsis-h"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-dot="0"></span>
+                <span class="dot" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
             </div>
         </section>
         <!-- Section clients -->
@@ -888,18 +1039,53 @@
                     <h2>Happy clients</h2>
                     <p>Client revievs</p>
                 </header>
+                <article class="clients-box active" data-value="0">
+                    <div class="clients-foto"><img src="img/clients1-150x150.png" alt="John Doe"></div>
+                    <h4 class="clients-name">John Doe</h4>
+                    <p class="clients-proffesion">Head of PR Departament</p>
+                    <img class="clients-foto-quotes" src="img/clients-quotes_27x20.png" alt="Quotes">
+                    <p class="clients-desc">Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel
+                        fermentum ipsum. Nulla at facilisis est, vel condimentum ligula. consectetur. Fusce sed purus
+                        eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus</p>
+                </article>
+                <article class="clients-box" data-value="1">
+                    <div class="clients-foto"><img src="img/clients2-150x150.png" alt="John Doe"></div>
+                    <h4 class="clients-name">Jane Doe</h4>
+                    <p class="clients-proffesion">Head of Accounting Departament</p>
+                    <img class="clients-foto-quotes" src="img/clients-quotes_27x20.png" alt="Quotes">
+                    <p class="clients-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem dolorum qui
+                        tempora repellendus officia, blanditiis adipisci odio impedit labore deleniti recusandae quo
+                        eaque consequuntur eum incidunt, amet sunt nesciunt quasi ducimus minima aperiam assumenda
+                        voluptatum.</p>
+                </article>
+                <article class="clients-box" data-value="2">
+                    <div class="clients-foto"><img src="img/clients3-151x150.png" alt="John Doe"></div>
+                    <h4 class="clients-name">Bob Doe</h4>
+                    <p class="clients-proffesion">Head of Technology Departament</p>
+                    <img class="clients-foto-quotes" src="img/clients-quotes_27x20.png" alt="Quotes">
+                    <p class="clients-desc">Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel
+                        fermentum ipsum. Nulla at facilisis est, vel
+                        condimentum ligula. consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus
+                        fermentum, orci leo facilisis
+                        purus</p>
+                </article>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-dot="0"></span>
+                <span class="dot" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
             </div>
         </section>
         <!-- Section brands -->
         <section class="brands">
             <div class="container">
                 <ul class="brands-content">
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
+                    <li class="brands-item"><img src="img/brands1_86x59.png" alt="Brand"></li>
+                    <li class="brands-item"><img src="img/brands2_82x59.png" alt="Brand"></li>
+                    <li class="brands-item"><img src="img/brands3_110x36.png" alt="Brand"></li>
+                    <li class="brands-item"><img src="img/brands4_95x54.png" alt="Brand"></li>
+                    <li class="brands-item"><img src="img/brands5_98x52.png" alt="Brand"></li>
+                    <li class="brands-item"><img src="img/brands6_104x39.png" alt="Brand"></li>
                 </ul>
             </div>
         </section>
@@ -911,10 +1097,46 @@
                     <p>Pricing table</p>
                 </header>
                 <div class="price-content">
-                    <div class="price-box"></div>
-                    <div class="price-box"></div>
-                    <div class="price-box"></div>
-                    <div class="price-box"></div>
+                    <article class="price-box">
+                        <h4 class="price-title">Express</h4>
+                        <p class="price-value"><i class="fas fa-dollar-sign"></i>9.99</p>
+                        <p class="price-desc">Tracking issues</p>
+                        <p class="price-desc">Add bugs through email</p>
+                        <p class="price-desc">Notifications</p>
+                        <p class="price-desc">Time tracking</p>
+                        <p class="price-desc">Custom views</p>
+                        <button class="btn btn-cigar">Choose</button>
+                    </article>
+                    <article class="price-box">
+                        <h4 class="price-title">Standart</h4>
+                        <p class="price-value"><i class="fas fa-dollar-sign"></i>14.99</p>
+                        <p class="price-desc">Tracking issues</p>
+                        <p class="price-desc">Add bugs through email</p>
+                        <p class="price-desc">Notifications</p>
+                        <p class="price-desc">Time tracking</p>
+                        <p class="price-desc">Custom views</p>
+                        <button class="btn btn-cigar">Choose</button>
+                    </article>
+                    <article class="price-box">
+                        <h4 class="price-title">Luxe</h4>
+                        <p class="price-value"><i class="fas fa-dollar-sign"></i>19.99</p>
+                        <p class="price-desc">Tracking issues</p>
+                        <p class="price-desc">Add bugs through email</p>
+                        <p class="price-desc">Notifications</p>
+                        <p class="price-desc">Time tracking</p>
+                        <p class="price-desc">Custom views</p>
+                        <button class="btn btn-cigar">Choose</button>
+                    </article>
+                    <article class="price-box">
+                        <h4 class="price-title">Premium</h4>
+                        <p class="price-value"><i class="fas fa-dollar-sign"></i>24.99</p>
+                        <p class="price-desc">Tracking issues</p>
+                        <p class="price-desc">Add bugs through email</p>
+                        <p class="price-desc">Notifications</p>
+                        <p class="price-desc">Time tracking</p>
+                        <p class="price-desc">Custom views</p>
+                        <button class="btn btn-cigar">Choose</button>
+                    </article>
                 </div>
             </div>
         </section>
@@ -926,9 +1148,28 @@
                     <p>Even more features available</p>
                 </header>
                 <div class="premium-content">
-
+                    <div class="premium-foto"><img src="img/premium-book_445x378.png" alt="Product"></div>
+                    <div class="premium-desc">
+                        <h4 class="premium-title">First feature</h4>
+                        <p class="premium-title-desc">Praesent metus urna, feugiat a placerat vel, elementum at leo.</p>
+                        <ul class="premium-title-desc">Quisque vel fermentum ipsum. Nulla at facilisis est.
+                            <li>Feature one</li>
+                            <li>Feature two</li>
+                            <li>Feature three</li>
+                        </ul>
+                        <h4 class="premium-title">Second feature</h4>
+                        <p class="premium-title-desc">Praesent metus urna, feugiat a placerat vel</p>
+                        <h4 class="premium-title">Third feature</h4>
+                        <p class="premium-title-desc">Praesent metus urna, feugiat a placerat vel, elementum at leo.</p>
+                    </div>
                 </div>
             </div>
+            <div class="dots">
+                <span class="dot active" data-dot="0"></span>
+                <span class="dot" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
+            </div>
+            <button class="btn btn-cigar">Get in touch</button>
         </section>
         <!-- Section facts -->
         <section class="facts">
@@ -938,19 +1179,42 @@
                     <p>About our works</p>
                 </header>
                 <div class="facts-content">
-                    <div class="facts-box"></div>
-                    <div class="facts-box"></div>
-                    <div class="facts-box"></div>
-                    <div class="facts-box"></div>
+                    <div class="facts-box">
+                        <p class="facts-number">1000</p>
+                        <h3 class="facts-title">Design projects</h3>
+                        <h3 class="facts-title">Released</h3>
+                        <p class="facts-desc">Praesent metus urna, feugiat a placerat elementum at leo</p>
+                    </div>
+                    <div class="facts-box">
+                        <p class="facts-number">900</p>
+                        <h3 class="facts-title">Photos</h3>
+                        <p class="facts-desc"><span>Praesent metus urna, feugiat a placerat elementum at leo</span></p>
+                    </div>
+                    <div class="facts-box">
+                        <p class="facts-number">500</p>
+                        <h3 class="facts-title">Marketing</h3>
+                        <h3 class="facts-title">Ideas</h3>
+                        <p class="facts-desc">Praesent metus urna, feugiat a placerat elementum at leo</p>
+                    </div>
+                    <div class="facts-box">
+                        <p class="facts-number">100</p>
+                        <h3 class="facts-title">Exhibitions</h3>
+                        <p class="facts-desc"><span>Praesent metus urna, feugiat a placerat elementum at leo</span></p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Section media -->
         <section class="media">
             <div class="container">
-                <div class="media-content">
-
-                </div>
+                <ul class="media-content">
+                    <li class="media-item">Tell about us:</li>
+                    <li class="media-item"><a href="#" class="media-link"><i class="fab fa-twitter"></i></a>152</li>
+                    <li class="media-item"><a href="#" class="media-link"><i class="fab fa-instagram"></i></a>31</li>
+                    <li class="media-item"><a href="#" class="media-link"><i class="fab fa-facebook-f"></i></a>165</li>
+                    <li class="media-item"><a href="#" class="media-link"><i class="fab fa-google-plus-g"></i></a>22</li>
+                    <li class="media-item"><a href="#" class="media-link"><i class="fab fa-pinterest-p"></i></a>165</li>
+                </ul>
             </div>
         </section>
         <!-- Section contact -->
