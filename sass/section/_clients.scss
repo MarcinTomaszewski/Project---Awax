@@ -1,0 +1,45 @@
+.clients {
+    min-height: 662px;
+    position: relative;
+    background-color: #ededed;
+
+    .container {
+        position: relative;
+    }
+}
+
+.clients-box {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 728px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.clients-box.active {
+    display: block;
+}
+
+.clients-name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.clients-proffesion {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.clients-foto-quotes {
+    margin: 30px 0 12px;
+}
+
+.clients-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #7e7e7e;
+}
