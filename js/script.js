@@ -16,7 +16,7 @@ const modalDone = document.querySelector('.modal-done');
 // For modal video
 const closeModalVideoBtn = document.querySelector('.modal-video .close');
 const modalVideo = document.querySelector('.modal-video');
-const showModalVideoBtn = document.querySelector('.about-box .close');
+const showModalVideoBtn = document.querySelector('.about-box .show');
 const video = document.querySelector('.modal-video video');
 
 // Scroll page
@@ -34,16 +34,26 @@ const firstTitleBanner = document.querySelector('.banner>h1:nth-of-type(1)');
 const secondTitleBanner = document.querySelector('.banner>h1:nth-of-type(2)');
 const bannerTitleFirstChange = ['Design is about', 'Design is good', 'Idea is best'];
 const bannerTitleSecondChange = ['Communication', 'Creation', 'Programming'];
-let element = 0;
+let element = 1;
 
 // Animation for banner
 function changeTitle() {
-    element++;
+    dots.forEach(function (dot) {
+        dot.classList.remove('active');
+    })
     if (element === bannerTitleFirstChange.length) {
         element = 0;
     }
     firstTitleBanner.textContent = bannerTitleFirstChange[element];
     secondTitleBanner.textContent = bannerTitleSecondChange[element];
+
+    dots.forEach(function (dot) {
+        const dotDataAttr = dot.getAttribute('data-dot');
+        if (dotDataAttr == element) {
+            dot.classList.add('active')
+        }
+    })
+    element++;
 }
 setInterval(changeTitle, 4000);
 
@@ -135,9 +145,11 @@ window.addEventListener('scroll', function () {
 })
 
 // Scroll to section after click button menu
+const topbarHeight = document.querySelector('.topbar').clientHeight;
+
 function chooseSection(attr) {
     $('html, body').animate({
-        scrollTop: $('.' + attr).offset().top
+        scrollTop: $('.' + attr).offset().top - topbarHeight
     }, 500);
 }
 $('.menu-xl li a, .menu-sm li a').on('click', function () {
@@ -180,3 +192,46 @@ projectsBtn.forEach(function (element) {
         }
     })
 })
+
+// Section team support
+const teamBoxes = document.querySelectorAll('.team-content');
+let counter = 1;
+
+const changeTeamBoxes = () => {
+    teamBoxes.forEach(box => {
+        box.classList.remove('active');
+    })
+    if (counter === teamBoxes.length) {
+        counter = 0;
+    }
+    teamBoxes.forEach(box => {
+        const attrData = box.getAttribute('data-value');
+        if (attrData == counter) {
+            box.classList.add('active');
+        }
+    })
+    counter++;
+}
+setInterval(changeTeamBoxes, 4000);
+
+// Section clients support
+const clientsBoxes = document.querySelectorAll('.clients-box');
+let clientsCounter = 1;
+const changeClientsBoxes = () => {
+    clientsBoxes.forEach(box => {
+        box.classList.remove('active');
+    })
+    if (clientsCounter === clientsBoxes.length) {
+        clientsCounter = 0;
+    }
+    clientsBoxes.forEach(box => {
+        const attrData = box.getAttribute('data-value');
+        if (attrData == clientsCounter) {
+            box.classList.add('active');
+        }
+    })
+    // console.log(clientsCounter);
+
+    clientsCounter++;
+}
+setInterval(changeClientsBoxes, 4000);
