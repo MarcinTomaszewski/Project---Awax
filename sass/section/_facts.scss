@@ -1,0 +1,56 @@
+.facts {
+    min-height: 416px;
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+
+    .section-title {
+        h2 {
+            color: #fff;
+        }
+
+        p {
+            color: #aeaeae;
+        }
+    }
+}
+
+.facts-content {
+    display: flex;
+    justify-content: center;
+}
+
+.facts-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 154px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.facts-box:last-child {
+    padding-right: 0;
+}
+
+.facts-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #b88b58;
+}
+
+.facts-title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.facts-desc {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #7e7e7e;
+}
