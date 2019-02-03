@@ -1,0 +1,17 @@
+.brands {
+    border: 1px solid #cfcfcf;
+    border-bottom: none;
+}
+
+.brands-content {
+    display: flex;
+    padding: 50px 0;
+}
+
+.brands-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
