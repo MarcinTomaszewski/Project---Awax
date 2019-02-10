@@ -3,19 +3,30 @@
     min-height: 757px;
     font-family: 'Montserrat', sans-serif;
 
+    .container {
+        position: relative;
+    }
+
     .dots {
         bottom: 15%;
     }
 
     .btn {
-        display: block;
+        display: none;
         margin: 90px auto 0;
     }
 }
 
 .premium-content {
-    display: flex;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 200px;
     border-bottom: 1px solid #bebebe;
+}
+
+.premium-content.active {
+    display: flex;
 }
 
 .premium-foto {

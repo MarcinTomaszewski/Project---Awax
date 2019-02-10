@@ -348,20 +348,31 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.premium .container {
+  position: relative;
+}
+
 .premium .dots {
   bottom: 15%;
 }
 
 .premium .btn {
-  display: block;
+  display: none;
   margin: 90px auto 0;
 }
 
 .premium-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 200px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.premium-content.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #bebebe;
 }
 
 .premium-foto {
