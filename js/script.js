@@ -27,65 +27,73 @@ const projectsBtn = document.querySelectorAll('.project-btn');
 const sectionBox = document.querySelectorAll('.project-box');
 
 // For banner
-const dots = document.querySelectorAll('.dot');
+const dotsBanner = document.querySelectorAll('header .dot');
 
 // For animation banner
 const firstTitleBanner = document.querySelector('.banner>h1:nth-of-type(1)');
 const secondTitleBanner = document.querySelector('.banner>h1:nth-of-type(2)');
 const bannerTitleFirstChange = ['Design is about', 'Design is good', 'Idea is best'];
 const bannerTitleSecondChange = ['Communication', 'Creation', 'Programming'];
-let element = 1;
+let counterBanner = 1;
 
 // Animation for banner
 function changeTitle() {
-    dots.forEach(function (dot) {
+    dotsBanner.forEach(dot => {
         dot.classList.remove('active');
     })
-    if (element === bannerTitleFirstChange.length) {
-        element = 0;
+    if (counterBanner === bannerTitleFirstChange.length) {
+        counterBanner = 0;
     }
-    firstTitleBanner.textContent = bannerTitleFirstChange[element];
-    secondTitleBanner.textContent = bannerTitleSecondChange[element];
+    firstTitleBanner.textContent = bannerTitleFirstChange[counterBanner];
+    secondTitleBanner.textContent = bannerTitleSecondChange[counterBanner];
 
-    dots.forEach(function (dot) {
+    dotsBanner.forEach(dot => {
         const dotDataAttr = dot.getAttribute('data-dot');
-        if (dotDataAttr == element) {
+        if (dotDataAttr == counterBanner) {
             dot.classList.add('active')
         }
     })
-    element++;
+    counterBanner++;
 }
 setInterval(changeTitle, 4000);
 
 // EVENTS
 
+
+// BANNER IN HEADER EFFECTS
+// Banner service after click
+dotsBanner.forEach(element => {
+    element.addEventListener('click', () => {
+        clearActiveClass(dotsBanner);
+        if (element.getAttribute('data-dot') == 0) {
+            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
+            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
+            element.classList.add('active');
+            counterBanner = 0;
+        } else if (element.getAttribute('data-dot') == 1) {
+            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
+            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
+            element.classList.add('active');
+            counterBanner = 1;
+        } else {
+            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
+            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
+            element.classList.add('active');
+            counterBanner = 2;
+        }
+    })
+})
+
 // MENU EFFECTS
 //Mobile menu support
-hamBtn.addEventListener('click', function () {
+hamBtn.addEventListener('click', () => {
     hamBtn.classList.toggle('active');
     menuMobile.classList.toggle('active');
 })
 
 // Cick menu mobile and remove class active
-menuMobile.addEventListener('click', function () {
+menuMobile.addEventListener('click', () => {
     menuMobile.classList.remove('active');
-})
-
-// BANNER IN HEADER EFFECTS
-// Banner service after click
-dots.forEach(function (element) {
-    element.addEventListener('click', function () {
-        if (element.getAttribute('data-dot') == 0) {
-            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
-            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
-        } else if (element.getAttribute('data-dot') == 1) {
-            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
-            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
-        } else {
-            firstTitleBanner.textContent = bannerTitleFirstChange[element.getAttribute('data-dot')];
-            secondTitleBanner.textContent = bannerTitleSecondChange[element.getAttribute('data-dot')];
-        }
-    })
 })
 
 // Spróbować przerobić tak obsługę modali by po kliknięciu któregoś z przycisków wywołujących modal - pojawiał się odpowiedni modal.
@@ -95,41 +103,41 @@ dots.forEach(function (element) {
 // Dodać modalom atrybuty data- odpowiadające wywołującym je przyciskom.
 // MODAL EFFECTS
 //Show modal-header
-showModalHeaderBtns.forEach(function (element) {
-    element.addEventListener('click', function () {
+showModalHeaderBtns.forEach(element => {
+    element.addEventListener('click', () => {
         modalHeader.classList.add('active');
         mainWrapper.classList.add('active');
     })
 })
 
 // Close modal-header
-modalHeaderCloseBtn.addEventListener('click', function () {
+modalHeaderCloseBtn.addEventListener('click', () => {
     modalHeader.classList.remove('active');
     mainWrapper.classList.remove('active');
 })
 
 // Modal-done support
-modalDoneBtn.addEventListener('click', function (e) {
-    modalDone.classList.add('active');
+modalDoneBtn.addEventListener('click', (e) => {
     // e.preventDefault();
+    modalDone.classList.add('active')
 })
 
 // Modal video support
-showModalVideoBtn.addEventListener('click', function () {
+showModalVideoBtn.addEventListener('click', () => {
     modalVideo.classList.add('active');
     mainWrapper.classList.add('active');
 })
-closeModalVideoBtn.addEventListener('click', function () {
+closeModalVideoBtn.addEventListener('click', () => {
     modalVideo.classList.remove('active');
     mainWrapper.classList.remove('active');
     video.pause();
 })
 
 // Nie dałem rady zrobić efektów scrolowania w czystym JS.
-// SCROLL EFFECTS
+// SCROLL EFFECTS 
 // Scroll page to start
-$(document).ready(function () {
-    $(".scroll-up").click(function () {
+$(document).ready(() => {
+    $(".scroll-up").click(() => {
         $("html, body").animate({
             scrollTop: 0
         }, 500);
@@ -137,7 +145,7 @@ $(document).ready(function () {
 });
 
 // Show scroll button
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     const scrollValue = window.scrollY;
     if (scrollValue > 100) {
         scrollBtn.classList.add('active');
@@ -152,8 +160,8 @@ function chooseSection(attr) {
         scrollTop: $('.' + attr).offset().top - topbarHeight
     }, 500);
 }
-$('.menu-xl li a, .menu-sm li a').on('click', function () {
-    const attrValue = $(this).attr('data-scroll');
+$('.menu-xl li a, .menu-sm li a').on('click', (e) => {
+    const attrValue = $(e.target).attr('data-scroll');
     if (attrValue) {
         chooseSection(attrValue);
     }
@@ -161,7 +169,7 @@ $('.menu-xl li a, .menu-sm li a').on('click', function () {
 
 // Section projects support
 function clearActiveClass(domElements) {
-    domElements.forEach(function (element) {
+    domElements.forEach(element => {
         if (element.classList.contains('active')) {
             element.classList.remove('active');
         }
@@ -173,15 +181,14 @@ function addClassActiveBtn(element) {
 }
 
 function addClassActiveSection(section, attr) {
-    section.forEach(function (element) {
+    section.forEach(element => {
         if (element.getAttribute('data-link') === attr) {
             element.classList.add('active');
         }
     })
 }
-
-projectsBtn.forEach(function (element) {
-    element.addEventListener('click', function () {
+projectsBtn.forEach(element => {
+    element.addEventListener('click', () => {
         const attrValue = element.getAttribute('data-link');
         clearActiveClass(sectionBox);
         clearActiveClass(projectsBtn);
@@ -192,34 +199,85 @@ projectsBtn.forEach(function (element) {
         }
     })
 })
-
 // Section team support
 const teamBoxes = document.querySelectorAll('.team-content');
-let counter = 1;
+const dotsTeam = document.querySelectorAll('.team .dot');
+let counterTeam = 1;
 
 const changeTeamBoxes = () => {
     teamBoxes.forEach(box => {
         box.classList.remove('active');
     })
-    if (counter === teamBoxes.length) {
-        counter = 0;
+    dotsTeam.forEach(dot => {
+        dot.classList.remove('active');
+    })
+
+    if (counterTeam === teamBoxes.length) {
+        counterTeam = 0;
     }
     teamBoxes.forEach(box => {
         const attrData = box.getAttribute('data-value');
-        if (attrData == counter) {
+        if (attrData == counterTeam) {
             box.classList.add('active');
         }
     })
-    counter++;
+    dotsTeam.forEach(dot => {
+        const dotDataAttr = dot.getAttribute('data-dot');
+        if (dotDataAttr == counterTeam) {
+            dot.classList.add('active')
+        }
+    })
+    counterTeam++;
 }
 setInterval(changeTeamBoxes, 4000);
 
+// Section team click
+dotsTeam.forEach(element => {
+    element.addEventListener('click', () => {
+        clearActiveClass(dotsTeam);
+        teamBoxes.forEach(box => {
+            box.classList.remove('active');
+        })
+        if (element.getAttribute('data-dot') == 0) {
+            teamBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 0) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            counterTeam = 0;
+        } else if (element.getAttribute('data-dot') == 1) {
+            teamBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 1) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            counterTeam = 1;
+        } else {
+            teamBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 2) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            counterTeam = 2;
+        }
+    })
+})
 // Section clients support
 const clientsBoxes = document.querySelectorAll('.clients-box');
+const dotsClients = document.querySelectorAll('.clients .dot');
 let clientsCounter = 1;
 const changeClientsBoxes = () => {
     clientsBoxes.forEach(box => {
         box.classList.remove('active');
+    })
+    dotsClients.forEach(dot => {
+        dot.classList.remove('active');
     })
     if (clientsCounter === clientsBoxes.length) {
         clientsCounter = 0;
@@ -230,8 +288,116 @@ const changeClientsBoxes = () => {
             box.classList.add('active');
         }
     })
-    // console.log(clientsCounter);
-
+    dotsClients.forEach(dot => {
+        const dotDataAttr = dot.getAttribute('data-dot');
+        if (dotDataAttr == clientsCounter) {
+            dot.classList.add('active')
+        }
+    })
     clientsCounter++;
 }
 setInterval(changeClientsBoxes, 4000);
+// Section clients click
+dotsClients.forEach(element => {
+    element.addEventListener('click', () => {
+        clearActiveClass(dotsClients);
+        clientsBoxes.forEach(box => {
+            box.classList.remove('active');
+        })
+        if (element.getAttribute('data-dot') == 0) {
+            clientsBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 0) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            clientsCounter = 0;
+        } else if (element.getAttribute('data-dot') == 1) {
+            clientsBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 1) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            clientsCounter = 1;
+        } else {
+            clientsBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 2) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            clientsCounter = 2;
+        }
+    })
+})
+
+// Section premium support
+const premiumBoxes = document.querySelectorAll('.premium-content');
+const dotsPremium = document.querySelectorAll('.premium .dot');
+let premiumCounter = 1;
+const changePremiumBoxes = () => {
+    premiumBoxes.forEach(box => {
+        box.classList.remove('active');
+    })
+    dotsPremium.forEach(dot => {
+        dot.classList.remove('active');
+    })
+    if (premiumCounter === premiumBoxes.length) {
+        premiumCounter = 0;
+    }
+    premiumBoxes.forEach(box => {
+        const attrData = box.getAttribute('data-value');
+        if (attrData == premiumCounter) {
+            box.classList.add('active');
+        }
+    })
+    dotsPremium.forEach(dot => {
+        const dotDataAttr = dot.getAttribute('data-dot');
+        if (dotDataAttr == premiumCounter) {
+            dot.classList.add('active')
+        }
+    })
+    premiumCounter++;
+}
+setInterval(changePremiumBoxes, 4000);
+// Section premium click
+dotsPremium.forEach(element => {
+    element.addEventListener('click', () => {
+        clearActiveClass(dotsPremium);
+        premiumBoxes.forEach(box => {
+            box.classList.remove('active');
+        })
+        if (element.getAttribute('data-dot') == 0) {
+            premiumBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 0) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            premiumCounter = 0;
+        } else if (element.getAttribute('data-dot') == 1) {
+            premiumBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 1) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            premiumCounter = 1;
+        } else {
+            premiumBoxes.forEach(box => {
+                const attrData = box.getAttribute('data-value');
+                if (attrData == 2) {
+                    box.classList.add('active');
+                }
+            })
+            element.classList.add('active');
+            premiumCounter = 2;
+        }
+    })
+})
